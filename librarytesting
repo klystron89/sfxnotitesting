@@ -11,7 +11,7 @@ molds = {
 
 }
 qualities = {
-    ["Astounding"] = 20
+    ["Astounding"] = 20;
     ["Marvelous"] = 21;
     ["Spectacular"] = 22;
     ["Extraordinary"] = 23;
