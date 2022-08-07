@@ -186,6 +186,8 @@ function update()
 end
 pcall(function()
 while task.wait() do
+item = game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender"].Item.Value
+item2 = game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender2"].Item.Value
     if item ~= nil then
         if (rarity ~= rarityfolder[game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender"].Item.Value.Config.Rarity.Value].RarityName.Value) then
             rarity = rarityfolder[game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender"].Item.Value.Config.Rarity.Value].RarityName.Value
