@@ -65,7 +65,7 @@ function update()
         {
             ["content"] = "<@"..id..">",
             ["embeds"] = {{
-                ["title"] = "Username: ||"..tostring(game.Players.LocalPlayer.Name).."||\nYour sword has upgraded!",
+                ["title"] = "Username: ||"..tostring(game.Players.LocalPlayer.Name).."||".."\nYour sword has upgraded!",
                 ["description"] = "Time: "..tostring(hours..":"..minutes),
                 ["type"] = "rich",
                 ["color"] = tonumber(0xffffff),
