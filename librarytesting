@@ -1,92 +1,27 @@
-molds = {
-    ["Diamond"] = 12;
-    ["Opal"] = 13;
-    ["Uranium"] = 14;
-    ["Sulfur"] = 15;
-    ["Crystal"] = 16;
-    ["Bloodstone"] = 17;
-    ["Moonstone"] = 18;
-    ["Topaz"] = 19;
-    ["Fossil"] = 20;
-
-}
-qualities = {
-    ["Astounding"] = 20;
-    ["Marvelous"] = 21;
-    ["Spectacular"] = 22;
-    ["Extraordinary"] = 23;
-    ["Fabulous"] = 24;
-    ["Splendid"] = 25;
-    ["Glorious"] = 26;
-    ["Magnificent"] = 27;
-    ["Terrific"] = 28;
-    ["Wondrous"] = 29;
-    ["Astonishing"] = 30;
-    ["Miraculous"] = 31;
-    ["Staggering"] = 32;
-    ["Supernatural"] = 33;
-} 
-classes = {
-    ["Unbeatable"] = 17;
-    ["Colossal"] = 18;
-    ["Unbreakable"] = 19;
-    ["Indomitable"] = 20;
-    ["Omnipotent"] = 21;
-    ["Vigorous"] = 22;
-    ["Ruthless"] = 23;
-    ["Mighty"] = 24;
-}
-raritieslib = {
-    ["Exotic-"] = 72;
-    ["Exotic"] = 73;
-    ["Exotic+"] = 74;
-    ["Exotic++"] = 75;
-    ["Supreme-"] = 76;
-    ["Supreme"] = 77;
-    ["Supreme+"] = 78;
-    ["Supreme++"] = 79;
-    ["Celestial-"] = 80;
-    ["Celestial"] = 81;
-    ["Celestial+"] = 82;
-    ["Celestial++"] = 83;
-    ["Eternal-"] = 84;
-    ["Eternal"] = 85;
-    ["Eternal+"] = 86;
-    ["Eternal++"] = 87;
-    ["Cosmic-"] = 88;
-    ["Cosmic"] = 89;
-    ["Cosmic+"] = 90;
-    ["Cosmic++"] = 91;
-    ["Heavenly-"] = 92;
-    ["Heavenly"] = 93;
-    ["Heavenly+"] = 94;
-    ["Heavenly++"] = 95;
-    ["Stellar-"] = 96;
-    ["Stellar"] = 97;
-    ["Stellar+"] = 98;
-    ["Stellar++"]= 99;
-    ["Stellar+3"] = 100;
-    ["Empyrean-"] = 101;
-    ["Empyrean"] = 102;
-    ["Empyrean+"] = 103;
-    ["Empyrean++"] = 104;
-    ["Empyrean+3"] = 105;
-    ["Galactic-"] = 106;
-    ["Galactic"] = 107;
-    ["Galactic+"] = 108;
-    ["Galactic++"] = 109;
-    ["Galactic+3"] = 110;
-    ["Paradoxal-"] = 111;
-    ["Paradoxal"] = 112;
-    ["Paradoxal+"] = 113;
-    ["Paradoxal++"] = 114;
-    ["Paradoxal+3"] = 115;
-    ["Universal-"] = 116;
-    ["Universal"] = 117;
-    ["Universal+"] = 118;
-    ["Universal++"] = 119;
-    ["Universal+3"] = 120;
-}
+raritylist = {"Unique-","Unique","Unique+","Unique++","Exotic-","Exotic","Exotic+","Exotic++","Supreme-","Supreme","Supreme+","Supreme++","Celestial-","Celestial","Celestial+","Celestial++","Eternal-","Eternal",'Eternal+',"Eternal++","Cosmic-","Cosmic","Cosmic+","Cosmic++","Heavenly-","Heavenly","Heavenly+","Heavenly++","Stellar-","Stellar","Stellar+","Stellar++","Stellar+3","Empyrean-","Empyrean","Empyrean+","Empyrean++","Empyrean+3","Galactic-","Galactic","Galactic+","Galactic++","Galactic+3"}
+moldlist = {"Diamond","Opal","Uranium","Sulfur","Crystal","Bloodstone","Moonstone","Topaz","Fossil"}
+classlist = {"Unbeatable","Colossal","Unbreakable","Indomitable","Omnipotent","Vigorous","Ruthless","Mighty"}
+qualitylist = {"Astounding","Marvelous","Spectacular","Extraordinary","Fabulous","Splendid","Glorious","Magnificent","Terrific","Wondrous","Astonishing","Miraculous","Staggering","Supernatural"}
+for i,v in pairs(moldlist) do
+    if minimummold == v then
+        minimummoldnum = i+11
+    end
+end
+for i,v in pairs(raritylist) do
+    if minimumrarity == v then
+        minimumraritynum = i +67
+    end
+end
+for i,v in pairs(qualitylist) do
+    if minimumquality == v then
+        minimumqualitynum = i+19
+    end
+end
+for i,v in pairs(classlist) do
+    if minimumclass == v then
+        minimumclassnum = i+16
+    end
+end
 print('credit to kly and ej_')
 item = game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender"].Item.Value
 item2 = game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender2"].Item.Value
@@ -95,10 +30,6 @@ qualityfolder = game:GetService("ReplicatedStorage").Qualities
 moldfolder = game:GetService("ReplicatedStorage").AllMolds
 rarityfolder = game:GetService("ReplicatedStorage").Rarities
 classfolder = game:GetService("ReplicatedStorage").Classes
-minimummoldlib = molds[minimummold] 
-minimumraritylib = raritieslib[minimumrarity]
-minimumqualitylib = qualities[minimumquality]
-minimumclasslib = classes[minimumclass]
 
 
 if item then
@@ -186,32 +117,30 @@ function update()
 end
 pcall(function()
 while task.wait() do
-item = game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender"].Item.Value
-item2 = game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender2"].Item.Value
     if item ~= nil then
         if (rarity ~= rarityfolder[game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender"].Item.Value.Config.Rarity.Value].RarityName.Value) then
             rarity = rarityfolder[game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender"].Item.Value.Config.Rarity.Value].RarityName.Value
-            if minimumraritylib <= game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender"].Item.Value.Config.Rarity.Value then
+            if minimumraritynum <= game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender"].Item.Value.Config.Rarity.Value then
                 update()
             end
         end
         
         if (quality ~= qualityfolder[game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender"].Item.Value.Config.Quality.Value].QualityName.Value) then
             quality = qualityfolder[game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender"].Item.Value.Config.Quality.Value].QualityName.Value
-            if minimumqualitylib <= game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender"].Item.Value.Config.Quality.Value then
+            if minimumqualitynum <= game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender"].Item.Value.Config.Quality.Value then
                 update()
             end
         end
         
         if (mold ~= moldfolder[game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender"].Item.Value.Config.Mold.Value].MoldName.Value) then
             mold = moldfolder[game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender"].Item.Value.Config.Mold.Value].MoldName.Value
-            if minimummoldlib <= game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender"].Item.Value.Config.Mold.Value then
+            if minimummoldnum <= game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender"].Item.Value.Config.Mold.Value then
                 update()
             end
         end
         if (class ~= classfolder[game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender"].Item.Value.Config.Class.Value].ClassNames.Value) then
             class = classfolder[game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender"].Item.Value.Config.Class.Value].ClassNames.Value
-            if minimumclasslib <= game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender"].Item.Value.Config.Class.Value then
+            if minimumclassnum <= game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender"].Item.Value.Config.Class.Value then
                 update()
             end
         end
@@ -220,27 +149,27 @@ item2 = game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["
     if item2 ~= nil then
         if (rarity2 ~= rarityfolder[game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender2"].Item.Value.Config.Rarity.Value].RarityName.Value) then
             rarity2 = rarityfolder[game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender2"].Item.Value.Config.Rarity.Value].RarityName.Value
-            if minimumraritylib <= game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender2"].Item.Value.Config.Rarity.Value then
+            if minimumraritynum <= game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender2"].Item.Value.Config.Rarity.Value then
                 update()
             end
         end
         
         if (quality2 ~= qualityfolder[game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender2"].Item.Value.Config.Quality.Value].QualityName.Value) then
             quality2 = qualityfolder[game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender2"].Item.Value.Config.Quality.Value].QualityName.Value
-            if minimumqualitylib <= game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender2"].Item.Value.Config.Quality.Value then
+            if minimumqualitynum <= game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender2"].Item.Value.Config.Quality.Value then
                 update()
             end
         end
         
         if (mold2 ~= moldfolder[game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender2"].Item.Value.Config.Mold.Value].MoldName.Value) then
             mold2 = moldfolder[game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender2"].Item.Value.Config.Mold.Value].MoldName.Value
-            if minimummoldlib <= game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender2"].Item.Value.Config.Mold.Value then
+            if minimummoldnum <= game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender2"].Item.Value.Config.Mold.Value then
                 update()
             end
         end
         if (class2 ~= classfolder[game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender2"].Item.Value.Config.Class.Value].ClassNames.Value) then
             class2 = classfolder[game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender2"].Item.Value.Config.Class.Value].ClassNames.Value
-            if minimumclasslib <= game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender2"].Item.Value.Config.Class.Value then
+            if minimumclassnum <= game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender2"].Item.Value.Config.Class.Value then
                 update()
             end
         end
