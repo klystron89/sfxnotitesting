@@ -122,6 +122,15 @@ while task.wait() do
             rarity = rarityfolder[game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender"].Item.Value.Config.Rarity.Value].RarityName.Value
             if minimumraritynum <= game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender"].Item.Value.Config.Rarity.Value then
                 update()
+            else
+                raritybefore = rarity
+                qualitybefore = quality
+                moldbefore = mold
+                classbefore = class 
+                raritybefore2 = rarity2 
+                qualitybefore2 = quality2 
+                classbefore2 = class2 
+                moldbefore2 = mold2
             end
         end
         
@@ -129,6 +138,15 @@ while task.wait() do
             quality = qualityfolder[game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender"].Item.Value.Config.Quality.Value].QualityName.Value
             if minimumqualitynum <= game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender"].Item.Value.Config.Quality.Value then
                 update()
+            else
+                raritybefore = rarity
+                qualitybefore = quality
+                moldbefore = mold
+                classbefore = class 
+                raritybefore2 = rarity2 
+                qualitybefore2 = quality2 
+                classbefore2 = class2 
+                moldbefore2 = mold2
             end
         end
         
@@ -136,12 +154,30 @@ while task.wait() do
             mold = moldfolder[game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender"].Item.Value.Config.Mold.Value].MoldName.Value
             if minimummoldnum <= game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender"].Item.Value.Config.Mold.Value then
                 update()
+            else
+                raritybefore = rarity
+                qualitybefore = quality
+                moldbefore = mold
+                classbefore = class 
+                raritybefore2 = rarity2 
+                qualitybefore2 = quality2 
+                classbefore2 = class2 
+                moldbefore2 = mold2
             end
         end
         if (class ~= classfolder[game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender"].Item.Value.Config.Class.Value].ClassNames.Value) then
             class = classfolder[game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender"].Item.Value.Config.Class.Value].ClassNames.Value
             if minimumclassnum <= game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender"].Item.Value.Config.Class.Value then
                 update()
+            else
+                raritybefore = rarity
+                qualitybefore = quality
+                moldbefore = mold
+                classbefore = class 
+                raritybefore2 = rarity2 
+                qualitybefore2 = quality2 
+                classbefore2 = class2 
+                moldbefore2 = mold2
             end
         end
     end
@@ -151,6 +187,15 @@ while task.wait() do
             rarity2 = rarityfolder[game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender2"].Item.Value.Config.Rarity.Value].RarityName.Value
             if minimumraritynum <= game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender2"].Item.Value.Config.Rarity.Value then
                 update()
+            else
+                raritybefore = rarity
+                qualitybefore = quality
+                moldbefore = mold
+                classbefore = class 
+                raritybefore2 = rarity2 
+                qualitybefore2 = quality2 
+                classbefore2 = class2 
+                moldbefore2 = mold2
             end
         end
         
@@ -158,6 +203,15 @@ while task.wait() do
             quality2 = qualityfolder[game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender2"].Item.Value.Config.Quality.Value].QualityName.Value
             if minimumqualitynum <= game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender2"].Item.Value.Config.Quality.Value then
                 update()
+            else
+                raritybefore = rarity
+                qualitybefore = quality
+                moldbefore = mold
+                classbefore = class 
+                raritybefore2 = rarity2 
+                qualitybefore2 = quality2 
+                classbefore2 = class2 
+                moldbefore2 = mold2
             end
         end
         
@@ -165,12 +219,30 @@ while task.wait() do
             mold2 = moldfolder[game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender2"].Item.Value.Config.Mold.Value].MoldName.Value
             if minimummoldnum <= game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender2"].Item.Value.Config.Mold.Value then
                 update()
+            else
+                raritybefore = rarity
+                qualitybefore = quality
+                moldbefore = mold
+                classbefore = class 
+                raritybefore2 = rarity2 
+                qualitybefore2 = quality2 
+                classbefore2 = class2 
+                moldbefore2 = mold2
             end
         end
         if (class2 ~= classfolder[game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender2"].Item.Value.Config.Class.Value].ClassNames.Value) then
             class2 = classfolder[game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender2"].Item.Value.Config.Class.Value].ClassNames.Value
             if minimumclassnum <= game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender2"].Item.Value.Config.Class.Value then
                 update()
+            else
+                raritybefore = rarity
+                qualitybefore = quality
+                moldbefore = mold
+                classbefore = class 
+                raritybefore2 = rarity2 
+                qualitybefore2 = quality2 
+                classbefore2 = class2 
+                moldbefore2 = mold2
             end
         end
     end
