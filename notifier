@@ -22,7 +22,18 @@ for i,v in pairs(classlist) do
         minimumclassnum = i+16
     end
 end
-print('credit to kly and ej_')
+game.StarterGui:SetCore("SendNotification",{
+    Title = "Webhook Loaded!",
+    Text = "Re-Execute when u take an item\n out of the ascender",
+    Icon = "",
+    Duration = 5
+})
+game.StarterGui:SetCore("SendNotification",{
+    Title = "Credits!",
+    Text = "Credits to kly#0531 and ej_",
+    Icon = "",
+    Duration = 2.5
+})
 item = game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender1"].Item.Value
 item2 = game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender2"].Item.Value
 item3 = game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender3"].Item.Value
@@ -58,7 +69,18 @@ if item2 then
     moldbefore2 = moldfolder[item2.Mold.Value].MoldName.Value
     classbefore2 = classfolder[item2.Class.Value].ClassNames.Value
 end
-
+if item3 then
+    item3 = item3.Config
+    level3 = item3.Level.Value
+    rarity3 = rarityfolder[item3.Rarity.Value].RarityName.Value
+    quality3 = qualityfolder[item3.Quality.Value].QualityName.Value
+    mold3 = moldfolder[item3.Mold.Value].MoldName.Value
+    class3 = classfolder[item3.Class.Value].ClassNames.Value
+    raritybefore3 = rarityfolder[item3.Rarity.Value].RarityName.Value
+    qualitybefore3 = qualityfolder[item3.Quality.Value].QualityName.Value
+    moldbefore3 = moldfolder[item3.Mold.Value].MoldName.Value
+    classbefore3 = classfolder[item3.Class.Value].ClassNames.Value
+end
 function update()
     minutes = os.date("%M")
     hours = os.date("%I")
@@ -246,6 +268,6 @@ while task.wait() do
                 moldbefore2 = mold2
             end
         end
-    end
+    end         
 end
 end)
