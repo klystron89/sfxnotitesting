@@ -119,9 +119,9 @@ end
 pcall(function()
 while task.wait() do
     if item ~= nil then
-        if (rarity ~= rarityfolder[game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender"].Item.Value.Config.Rarity.Value].RarityName.Value) then
-            rarity = rarityfolder[game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender"].Item.Value.Config.Rarity.Value].RarityName.Value
-            if minimumraritynum <= game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender"].Item.Value.Config.Rarity.Value then
+        if (rarity ~= rarityfolder[game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender1"].Item.Value.Config.Rarity.Value].RarityName.Value) then
+            rarity = rarityfolder[game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender1"].Item.Value.Config.Rarity.Value].RarityName.Value
+            if minimumraritynum <= game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender1"].Item.Value.Config.Rarity.Value then
                 update()
             else
                 raritybefore = rarity
@@ -135,9 +135,9 @@ while task.wait() do
             end
         end
         
-        if (quality ~= qualityfolder[game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender"].Item.Value.Config.Quality.Value].QualityName.Value) then
-            quality = qualityfolder[game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender"].Item.Value.Config.Quality.Value].QualityName.Value
-            if minimumqualitynum <= game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender"].Item.Value.Config.Quality.Value then
+        if (quality ~= qualityfolder[game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender1"].Item.Value.Config.Quality.Value].QualityName.Value) then
+            quality = qualityfolder[game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender1"].Item.Value.Config.Quality.Value].QualityName.Value
+            if minimumqualitynum <= game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender1"].Item.Value.Config.Quality.Value then
                 update()
             else
                 raritybefore = rarity
@@ -151,9 +151,9 @@ while task.wait() do
             end
         end
         
-        if (mold ~= moldfolder[game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender"].Item.Value.Config.Mold.Value].MoldName.Value) then
-            mold = moldfolder[game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender"].Item.Value.Config.Mold.Value].MoldName.Value
-            if minimummoldnum <= game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender"].Item.Value.Config.Mold.Value then
+        if (mold ~= moldfolder[game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender1"].Item.Value.Config.Mold.Value].MoldName.Value) then
+            mold = moldfolder[game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender1"].Item.Value.Config.Mold.Value].MoldName.Value
+            if minimummoldnum <= game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender1"].Item.Value.Config.Mold.Value then
                 update()
             else
                 raritybefore = rarity
@@ -166,9 +166,9 @@ while task.wait() do
                 moldbefore2 = mold2
             end
         end
-        if (class ~= classfolder[game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender"].Item.Value.Config.Class.Value].ClassNames.Value) then
-            class = classfolder[game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender"].Item.Value.Config.Class.Value].ClassNames.Value
-            if minimumclassnum <= game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender"].Item.Value.Config.Class.Value then
+        if (class ~= classfolder[game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender1"].Item.Value.Config.Class.Value].ClassNames.Value) then
+            class = classfolder[game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender1"].Item.Value.Config.Class.Value].ClassNames.Value
+            if minimumclassnum <= game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender1"].Item.Value.Config.Class.Value then
                 update()
             else
                 raritybefore = rarity
