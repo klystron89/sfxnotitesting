@@ -23,8 +23,9 @@ for i,v in pairs(classlist) do
     end
 end
 print('credit to kly and ej_')
-item = game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender"].Item.Value
+item = game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender1"].Item.Value
 item2 = game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender2"].Item.Value
+item3 = game:GetService("Workspace")[game.Players.LocalPlayer.Name.."'s Base"]["Ascender3"].Item.Value
 
 qualityfolder = game:GetService("ReplicatedStorage").Qualities
 moldfolder = game:GetService("ReplicatedStorage").AllMolds
